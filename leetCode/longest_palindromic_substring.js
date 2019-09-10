@@ -59,4 +59,38 @@ const isPalindrome = (s) => {
   return true;
 };
 
+/*
+- = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = 
+
+Above solution is a brute force, naive, slow solution.
+Let's optimize it.
+
+- = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = 
+*/
+
+
+const longestPalindrome = function(s) {
+	let longest = '';
+
+	for (let i = 0; i < s.length; i += 1) {
+		let n = 0;
+		while (n < 2) {
+			let left = i;
+			let right = i + n;
+
+			while (s[left] && s[left] === s[right]) {
+				left -= 1;
+				right += 1;
+			};
+
+			if ( (right - left - 1) > longest.length ) {
+				longest = s.slice(left + 1, right);
+			};
+
+			n += 1;
+		};
+	};
+
+	return longest;
+};
 
