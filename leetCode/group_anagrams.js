@@ -26,12 +26,12 @@ Note:
 
 /*
 
-	scan through the input array
-	split > sort > join each word
-	check object if a key of the sorted word exist
-		if yes, push the original word into the value array
-		if no, init value as array with the original word
-	return Object.values of object
+scan through the input array
+split > sort > join each word
+check object if a key of the sorted word exist
+	if yes, push the original word into the value array
+	if no, init value as array with the original word
+return Object.values of object
 
 */
 
