@@ -1,9 +1,7 @@
 
-# // LeetCode
-# // # 1
-# // Easy
-
-# /*
+# LeetCode
+# 1
+# Easy
 
 # Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 
@@ -16,18 +14,13 @@
 # Because nums[0] + nums[1] = 2 + 7 = 9,
 # return [0, 1].
 
-# */
-
-# /*
-
-# create obj key of element and value of index
-# calculate the difference of element from target
-# look up the obj and check the value
-
-# */
-
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
+        '''
+        create obj key of element and value of index
+        calculate the difference of element from target
+        look up the obj and check the value
+        '''
         d = {}
         
         for i, cur in enumerate(nums):
