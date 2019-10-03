@@ -23,7 +23,7 @@
 # Explanation: In this case, no transaction is done, i.e. max profit = 0.
 
 
-import sys
+# import sys
 
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
@@ -36,13 +36,25 @@ class Solution:
             max_profit = cur - min
         return max_profit
         '''
-        min = sys.maxsize
-        max = 0
+        if len(prices) == 0: return 0
+        lowest = max(prices) + 1
+        max_profit = 0
         
         for n in prices:
-            if min > n:
-                min = n
-            elif max < n - min:
-                max = n - min
+            if lowest > n:
+                lowest = n
+            elif max_profit < n - lowest:
+                max_profit = n - lowest
         
-        return max
+        return max_profit
+        
+        # min = sys.maxsize
+        # max = 0
+        
+        # for n in prices:
+        #     if min > n:
+        #         min = n
+        #     elif max < n - min:
+        #         max = n - min
+        
+        # return max
